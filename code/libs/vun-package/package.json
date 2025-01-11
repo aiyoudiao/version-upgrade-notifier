@@ -1,0 +1,21 @@
+{
+  "name": "vun-package",
+  "version": "0.0.1",
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo"
+  ],
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "nx": {
+    "sourceRoot": "libs/vun-package/src",
+    "projectType": "library"
+  },
+  "scripts": {
+    "show": "nx show project vun-package"
+  }
+}
