@@ -1,0 +1,51 @@
+{
+  "name": "version-upgrade-notifier",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "version-upgrade-notifier",
+    "umi-plugin",
+    "click-to-code"
+  ],
+  "repository": "https://github.com/aiyoudiao/version-upgrade-notifier",
+  "license": "MIT",
+  "author": "哎哟迪奥 <newdiao@163.com>",
+  "bin": {
+    "vun": "dist/cjs/vun.js"
+  },
+  "main": "dist/cjs/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "package.json",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "father build",
+    "changelog": "conventional-changelog --config ./commit-config/changelog-config.js -p angular -i -o CHANGELOG.md -r 1",
+    "commit": "git-cz",
+    "dev": "father dev",
+    "version": "conventional-changelog --config ./commit-config/changelog-config.js -p angular -i -o CHANGELOG.md && git add CHANGELOG.md"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git",
+      "czConfig": "./commit-config/cz-config.js"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "commitizen": "^4.3.0",
+    "conventional-changelog-cli": "^5.0.0",
+    "cz-git": "^1.9.4",
+    "father": "^4.1.8",
+    "fs-extra": "^10.0.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.0.3",
+    "yargs": "^17.0.0"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  }
+}
